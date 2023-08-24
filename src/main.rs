@@ -5,7 +5,11 @@ struct Block {
 
 impl Block {
     fn smaller(&self, other: Block) -> bool {
-        return self.size < other.size
+        if other.size > self.size {
+            true
+        } else {
+            false
+        }
     }
 }
 
@@ -50,5 +54,6 @@ fn main() {
         third_pile: Stack::new()
     };
 
-    dbg!("{:?}", mh);
+    // implement iteration over the Hanoi Stacks
+    // implement better Structs using Option to encase the values
 }
